@@ -55,6 +55,21 @@ docker exec -it ollama ollama pull llama3.2
 
 ---
 
+---
+
+### 👥 Partecipanti al progetto
+
+Queste persone hanno collaborato allo sviluppo e alla configurazione del progetto:
+
+- [@albertoarola](https://github.com/albertoarola)
+- [@rosy1a](https://github.com/rosy1a)
+- [@Camrotez](https://github.com/Camrotez)
+- [@Dondo-98](https://github.com/Dondo-98)
+- [@Francesco17-tr](https://github.com/Francesco17-tr)
+
+
+
+
 ## 📝 Note
 
 - Questo progetto **non modifica il codice originale** di Open WebUI.
