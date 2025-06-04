@@ -36,13 +36,14 @@ docker compose up -d
 
 4. **🧠 Modelli AI in Ollama**
   Dopo aver avviato i container con `docker compose up -d` il container di Ollama sarà attivo, ma non conterrà alcun **modello preinstallato.**
-  Per scaricare un modello (ad esempio LLaMA 3.2), esegui:
+
+   Sostituisci llama3 con il nome di qualsiasi altro modello supportato da Ollama che desideri usare. Puoi consultare i modelli disponibili sulla pagina ufficiale di **[Ollama](https://ollama.com/library).**  
+Per scaricare un modello (ad esempio LLaMA 3.2), esegui:  
 ```bash
 docker exec -it ollama ollama pull llama3.2
 ```
-  Sostituisci llama3 con il nome di qualsiasi altro modello supportato da Ollama che desideri usare. Puoi consultare i modelli disponibili sulla pagina ufficiale di **[Ollama](https://ollama.com/library).**
    
-6. **Accedi all'interfaccia**
+5. **Accedi all'interfaccia**
    
    Apri il tuo browser e digita:
    
