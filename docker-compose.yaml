@@ -12,6 +12,22 @@ services:
     networks:
       - openwebui-net
 
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - /etc/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - open-webui
+    networks:
+      - openwebui-net
+    restart: unless-stopped
+
+
   open-webui:
     build:
       context: .
@@ -39,20 +55,6 @@ volumes:
   ollama: {}
   open-webui: {}
 
-nginx:
-    image: nginx:latest
-    container_name: nginx
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - /etc/letsencrypt:/etc/letsencrypt
-    depends_on:
-      - open-webui
-    networks:
-      - openwebui-net
-    restart: unless-stopped
 networks:
   openwebui-net:
       driver: bridge
